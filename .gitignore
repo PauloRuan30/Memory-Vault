@@ -1,0 +1,76 @@
+# -----------------------------------------------------------------
+# BUILD ARTIFACTS, DEPENDENCIES, AND TEMPORARY FILES
+# -----------------------------------------------------------------
+
+# ⚠️ **CRITICAL: NODE.JS/FRONTEND**
+# Ignore the main node_modules folder (used in the 'frontend' directory)
+# This prevents the huge folder from being accidentally committed.
+node_modules/
+node_modules
+
+# Go Dependencies/Build
+# Go binaries, test files, and Go workspace
+*.exe
+*.test
+*.out
+vendor/
+go.work
+go.work.sum
+
+# Python Virtual Environments & Build
+# Standard virtual environments (venv) in the root and 'icon-worker'
+venv/
+env/
+.venv/
+# Byte-compiled files
+__pycache__/
+*.py[cod]
+# Build/distribution directories
+build/
+dist/
+*.egg-info/
+
+# -----------------------------------------------------------------
+# VITE / FRONTEND SPECIFIC
+# -----------------------------------------------------------------
+
+# Vite / React build output (often named 'dist' or 'build')
+/frontend/dist
+/frontend/build
+
+# TypeScript cache files
+*.tsbuildinfo
+
+# Vite temp cache
+.vite/
+
+# -----------------------------------------------------------------
+# IDE AND ENVIRONMENT
+# -----------------------------------------------------------------
+
+# IDE-specific directories (VSCode and general IDEs)
+.idea/
+.vscode/
+
+# Environment files
+# Don't commit files with secrets/configuration.
+# Use !.env.example to allow an example file to be committed.
+.env
+.env.*
+!.env.example
+
+# Logs and debugging
+logs/
+npm-debug.log*
+yarn-debug.log*
+*.log
+coverage/
+.nyc_output/
+
+# -----------------------------------------------------------------
+# SYSTEM & MISC
+# -----------------------------------------------------------------
+
+# Docker-related artifacts
+# Volumes/bind mounts (if used for local development)
+data/

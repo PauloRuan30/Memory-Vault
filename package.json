@@ -1,0 +1,29 @@
+{
+  "name": "memory-vault",
+  "version": "1.0.0",
+  "description": "PS2 Nostalgic File Manager",
+  "private": true,
+  "workspaces": [
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "docker-compose up --build",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd services/api-gateway && go run cmd/server/main.go",
+    "test": "npm run test --workspaces --if-present"
+  },
+  "keywords": [
+    "ps2",
+    "nostalgia",
+    "file-manager",
+    "3d",
+    "golang",
+    "react"
+  ],
+  "author": "PauloRuan30",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  }
+}
